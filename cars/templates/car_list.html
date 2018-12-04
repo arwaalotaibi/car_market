@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Car List</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}List{% endblock title %}
+
+{% block content %}
+
+
+
 	{% for car in cars %}
 		<a href="{{car.get_absolute_url}}">
 			<h1>
@@ -11,9 +13,12 @@
 				<small>
 					{{car.year}}
 				</small>
+				 {% if car.car_img %}
+				 <img class="card-img-top" src="{{car.car_img.url}}" >
+                {% endif %}
 			</h1>
 		</a>
 		<hr>
 	{% endfor %}
-</body>
-</html>
+
+{% endblock content %}

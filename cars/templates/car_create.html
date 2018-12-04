@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Create
+{% endblock title %}
+
+{% block content %}
+<h1>       </h1>
+
+<form action="{% url 'car-create' %}" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form|crispy}}
+  <input type="submit" value="Create" onclick="a()">
+  <h1>    </h1>
+  
+</form>
+
+<script type="text/javascript">
+	 
+	 function a(){
+	 	alert(" car was created ")
+	 } 
+
+</script>
+{% endblock content %}
