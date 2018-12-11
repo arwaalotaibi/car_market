@@ -25,7 +25,7 @@ SECRET_KEY = 'mmj9k6e^e=si_+-lz-505sj(!)-!vly6zy3+xb(89^ldu&wcb9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [ '68.183.222.198' , 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','68.183.222.198']
 
 
 # Application definition
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'cars',
     'crispy_forms',
 
@@ -83,9 +82,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'django',
-        "USER": 'django',
-        "PASSWORD": 'cedcc10e412c56e728add7390b085b04',
-        "HOST": 'localhost',
+        'USER': 'django',
+        'PASSWORD': 'cedcc10e412c56e728add7390b085b04',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
